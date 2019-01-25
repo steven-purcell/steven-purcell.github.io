@@ -8,7 +8,7 @@ Exploring and doing a simple exploratory analysis of a dataset is a crucial skil
 ### Getting Started
 I use [Jupyter Notebook](https://jupyter.org/), [pandas](https://pandas.pydata.org/), and [matplotlib](https://matplotlib.org/) for this example. New York provides a [free dataset](https://data.ny.gov/Public-Safety/Recidivism-Beginning-2008/y7pw-wrny) that contains information starting in 2008 regarding prisoner release and reoffender status. The dataset is easy to work with, containing 5 columns and approximately 124,000 records. There are no null or NaN values to deal with as it is a clean and processed data set which makes this a painless process.
 
-### The Code WalkThrough
+### The Code Walkthrough
 Python requires that any packages be declared and imported. This typically happens at the top of your code. Additionally, Jupyter can be forced to show the plots we create by including `%matplotlib inline`. If you are new to Python, pay special attention to the sections of code where these packages are called by looking for `pd`, `plt`, and `pandas_profiling`. 
 
 ```python
