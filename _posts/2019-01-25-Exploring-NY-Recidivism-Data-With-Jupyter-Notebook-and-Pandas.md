@@ -5,10 +5,19 @@ title: Exploring NY Recidivism Data With Jupyter Notebook and Pandas
 ### Introduction
 Exploring and doing a simple exploratory analysis of a dataset is a crucial skill for anyone aspiring to work with data, which is nearly everyone nowadays! Understanding your data is a critical first step to deriving meaning and producing results. With minimal coding background required, I will outline a way for you to analyze and explore your data. Please visit my Github and clone [this repository](https://github.com/steven-purcell/data-analytics-ny-recidivism) for the full notebook. A link to a Github tutorial is provided at the end of this entry if you need help getting started.
 
-### What
+### Getting Started
 I use [Jupyter Notebook](https://jupyter.org/), [pandas](https://pandas.pydata.org/), and [matplotlib](https://matplotlib.org/) for this example. New York provides a [free dataset](https://data.ny.gov/Public-Safety/Recidivism-Beginning-2008/y7pw-wrny) that contains information starting in 2008 regarding prisoner release and reoffender status. The dataset is easy to work with, containing 5 columns and approximately 124,000 records. There are no null or NaN values to deal with as it is a clean and processed data set which makes this a painless process.
 
-### How
+### The Code WalkThrough
+Python requires that any packages be declared and imported. This typically happens at the top of your code. Additionally, Jupyter can be forced to show the plots we create by including `%matplotlib inline`. If you are new to Python, pay special attention to the sections of code where these packages are called by looking for `pd`, `plt`, and `pandas_profiling`. 
+
+```python
+import pandas as pd
+import pandas_profiling
+import matplotlib.pyplot as plt
+%matplotlib inline
+```
+
 Load the .csv to a pandas DataFrame using `pandas.read_csv()`. A DataFrame is a 2-dimensional labeled data structure with a column format, similar to a spreadsheet.
 
 I initially use a `data.info()` call to display some information about the data contained in the file. This initial information provides column names, a row count, a flag for present null values, and the datatype inferred by pandas. This is useful for validating the data and alerting us if any processing will be necessary to handle null values or create dummy variables. We can see from this information that our dataset is in a post-processed state.
